@@ -44,10 +44,10 @@ public class AnimalController {
     @DeleteMapping("/animals/{id}")
     public ResponseEntity<Void> deleteAnimal(@PathVariable Integer id) {
         try {
-            service.delete(id); // Deleta o animal
-            return ResponseEntity.noContent().build(); // Retorna 204 No Content se deletado com sucesso
+            service.delete(id);
+            return ResponseEntity.noContent().build();
         } catch (RuntimeException e) {
-            return ResponseEntity.notFound().build(); // Retorna 404 Not Found se o animal não for encontrado
+            return ResponseEntity.notFound().build();
         }
     }
     @GetMapping("/animals")
