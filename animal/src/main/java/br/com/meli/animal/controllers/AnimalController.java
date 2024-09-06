@@ -50,7 +50,7 @@ public class AnimalController {
             return ResponseEntity.notFound().build();
         }
     }
-    @GetMapping("/animals/all")
+    @GetMapping("/animals")
     public ResponseEntity<List<Animal>> getAllAnimals() {
         List<Animal> animals = service.findAll();
         return ResponseEntity.ok(animals);
